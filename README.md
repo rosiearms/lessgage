@@ -1,7 +1,7 @@
 
 # Lessgage
 
-To run this project locally clone the repo and save it in a specified file:
+To run this project locally, open a terminal, navigate into the file you want to save the project in, clone the repo and run:
 
 ```git clone https://github.com/rosiearms/lessgage.git```
 
