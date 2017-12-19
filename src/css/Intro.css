@@ -1,0 +1,45 @@
+.Intro .second .hero {
+  background-image: url("../imgs/moneyhouse.jpg");
+  min-height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.Intro .third .hero{
+  background-image: url("../imgs/shakinghands.jpg");
+  min-height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Intro .double{
+  background-color: rgba(71, 155, 71, 0.63);
+}
+
+.Intro .double h1{
+  font-family: 'Francois One', sans-serif;
+  font-size: 2em;
+}
+
+.Intro .double p{
+  font-family: 'PT Sans Narrow', sans-serif;
+  padding-bottom: 1em;
+}
+
+.Intro .lessgage{
+  background-color: rgba(211, 171, 42, 0.40);
+}
+
+.Intro .lessgage h1{
+  font-family: 'Francois One', sans-serif;
+  font-size: 2em;
+}
+
+.Intro .lessgage p{
+  font-family: 'PT Sans Narrow', sans-serif;
+  padding-bottom: 1em;
+}

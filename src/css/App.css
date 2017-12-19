@@ -1,0 +1,29 @@
+body, html {
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App .hero {
+  background-image: url("../imgs/room.jpg");
+  min-height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.App .hero .title{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 5em;
+  padding: 10px;
+}
+
+.App .hero .header{
+  background-color: rgba(255, 255, 255, 0.26);
+  display: inline-block;
+  border-radius: 0.5em;
+}
