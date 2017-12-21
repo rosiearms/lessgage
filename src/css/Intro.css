@@ -18,6 +18,7 @@
 
 .Intro .double{
   background-color: rgba(71, 155, 71, 0.63);
+  width: 100%;
 }
 
 .Intro .double h1{
@@ -32,6 +33,7 @@
 
 .Intro .lessgage{
   background-color: rgba(211, 171, 42, 0.40);
+
 }
 
 .Intro .lessgage h1{
