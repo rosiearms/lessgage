@@ -10,7 +10,8 @@ class LoanCalc extends Component {
       deposit: 0,
       years: 0,
       normCost: 0,
-      lessCost: 0
+      lessCost: 0,
+      submitted: false
     }
     this.handleDepositChange = this.handleDepositChange.bind(this);
     this.handlePriceChange = this.handlePriceChange.bind(this);
@@ -26,7 +27,8 @@ class LoanCalc extends Component {
       deposit: 0,
       years: 0  ,
       normCost: 'A large amount',
-      lessCost: 'Alot less than the normal amount'
+      lessCost: 'Alot less than the normal amount',
+      submitted: true
     })
   }
 
@@ -83,6 +85,12 @@ class LoanCalc extends Component {
               </div>
             </div>
           </form>
+          {this.state.submitted === 'false' ? '' : <div className="modal is-active">
+  <div className="modal-background"></div>
+  <div className="modal-content">
+  </div>
+  <button className="modal-close is-large" aria-label="close"></button>
+</div> }
         </div>
       </div>
     )
