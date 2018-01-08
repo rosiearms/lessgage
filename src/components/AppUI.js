@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import Intro from './Intro.js';
+import IntroUI from './IntroUI.js';
 
-class App extends Component {
+class AppUI extends Component {
   render() {
     return (  
       <div className="App">
-        <section class="hero first is-large">
+        <section className="hero first is-large">
           <div className='hero-head'>
 
           </div>
-          <div class="hero-body">
-            <div class="container header">
-              <h1 class="title">
+          <div className="hero-body">
+            <div className="container header">
+              <h1 className="title">
                 Lessgage
       </h1>
-              <h2 class="subtitle">
+              <h2 className="subtitle">
                 when less means more
       </h2>
             </div>
@@ -24,10 +24,10 @@ class App extends Component {
 
           </div>
         </section>
-        <Intro />
+        <IntroUI />
       </div>
     );
   }
 }
 
-export default App;
+export default AppUI;
