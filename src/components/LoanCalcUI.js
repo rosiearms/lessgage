@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 import '../css/LoanCalc.css'
 
 
@@ -9,26 +10,30 @@ class LoanCalc extends Component {
       price: 0,
       deposit: 0,
       years: 0,
-      normCost: 0,
-      lessCost: 0,
       submitted: false
     }
     this.handleDepositChange = this.handleDepositChange.bind(this);
     this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     console.log('i am submitting');
     this.setState({
+      submitted: true
+    })
+  }
+
+  closeModal(e) {
+    e.preventDefault();
+    this.setState({
       price: 0,
       deposit: 0,
-      years: 0  ,
-      normCost: 'A large amount',
-      lessCost: 'Alot less than the normal amount',
-      submitted: true
+      years: 0,
+      submitted: false
     })
   }
 
@@ -84,14 +89,20 @@ class LoanCalc extends Component {
                 </div>
               </div>
             </div>
-          </form>
-          {this.state.submitted === 'false' ? '' : <div className="modal is-active">
-  <div className="modal-background"></div>
-  <div className="modal-content">
-  </div>
-  <button className="modal-close is-large" aria-label="close"></button>
-</div> }
+          </form>    
         </div>
+        <ReactModal
+  isOpen={this.state.submitted}
+  contentLabel="Modal"
+  ariaHideApp={false}
+>
+  <h1>RESULTS</h1>
+  <p>Average mortgage cost</p>
+  <p>Cost with Lessgage</p>
+  <p>Total cost: {`${this.state.price - this.state.deposit} plus the fixed fee`}</p>
+  <p>Monthly Payment: {`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`}</p>
+  <button onClick={this.closeModal} >calculate again</button>
+</ReactModal>
       </div>
     )
   }
