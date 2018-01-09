@@ -102,7 +102,7 @@ class LoanCalc extends Component {
   <h1>RESULTS</h1>
   <p>Average mortgage cost</p>
   <p>Cost with Lessgage</p>
-  <p>Total cost: {`${this.state.price - this.state.deposit} + this.state.fee`}</p>
+  <p>Total cost: {`${this.state.price - this.state.deposit + this.state.fee} `}</p>
   <p>Monthly Payment: {`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`}</p>
   <p>&nbsp;</p>
   <p>Cost with Mortgage</p>
