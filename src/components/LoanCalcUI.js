@@ -10,6 +10,9 @@ class LoanCalc extends Component {
       price: 0,
       deposit: 0,
       years: 0,
+      borrowed: 0,
+      fee: 2000,
+      monthly_rate: 0,
       submitted: false
     }
     this.handleDepositChange = this.handleDepositChange.bind(this);
@@ -99,8 +102,15 @@ class LoanCalc extends Component {
   <h1>RESULTS</h1>
   <p>Average mortgage cost</p>
   <p>Cost with Lessgage</p>
-  <p>Total cost: {`${this.state.price - this.state.deposit} plus the fixed fee`}</p>
+  <p>Total cost: {`${this.state.price - this.state.deposit} + this.state.fee`}</p>
   <p>Monthly Payment: {`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`}</p>
+  <p>&nbsp;</p>
+  <p>Cost with Mortgage</p>
+  ${ this.state.borrowed = this.state.price - this.state.deposit }
+  ${ this.state.monthly_payment = this.state.borrowed*(0.00327374+(0.00327374/(Math.pow((0.00327374+1), this.state.years*12)-1))) }
+  <p>Total cost: {`${ this.state.monthly_payment * this.state.years*12 }`}</p>
+  <p>Monthly Payment: {`${(this.state.monthly_payment) }`}</p>
+
   <button onClick={this.closeModal} >calculate again</button>
 </ReactModal>
       </div>
