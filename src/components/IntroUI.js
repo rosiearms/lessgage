@@ -8,7 +8,7 @@ class IntroUI extends Component {
     return (
       <div className="Intro">
         <div className='double'>
-          <h1>Double Trouble</h1>
+          <h1>There is another way...</h1>
           <p>When you buy a house, you tend to pay for it twice.
 Once in the sale price and once in the interest accrued throughout the mortgage.
 Buy two, only get one.
