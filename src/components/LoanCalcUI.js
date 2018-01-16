@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import '../css/LoanCalc.css'
 
+const modalStyles = {
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(255, 255, 255, 0.4)'
+  },
+  content : {
+    position: 'absolute',
+    top                   : '50%',
+    right                 : 'auto',
+    bottom                : 'auto'
+  }
+}
 
 class LoanCalc extends Component {
   constructor(props) {
@@ -66,7 +82,7 @@ class LoanCalc extends Component {
                 mortgage term:
         </label>
               <div className="control">
-                <input type="text" placeholder='max 35yrs' onChange={this.handleTermChange} />
+                <input type="text" value={this.state.years} onChange={this.handleTermChange} />
               </div>
               <label>
                 property price:
@@ -95,12 +111,13 @@ class LoanCalc extends Component {
   isOpen={this.state.submitted}
   contentLabel="Modal"
   ariaHideApp={false}
+  style={modalStyles}
 >
   <h1>RESULTS</h1>
   <p>Average mortgage cost</p>
   <p>Cost with Lessgage</p>
   <p>Total cost: {`${this.state.price - this.state.deposit} plus the fixed fee`}</p>
-  <p>Monthly Payment: {`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`}</p>
+  <p>Monthly Payment: {`${Math.floor((this.state.price - this.state.deposit) / (this.state.years * 12))}`}</p>
   <button onClick={this.closeModal} >calculate again</button>
 </ReactModal>
       </div>
