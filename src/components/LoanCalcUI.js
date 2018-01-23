@@ -19,6 +19,12 @@ const modalStyles = {
   }
 }
 
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'GBP',
+  minimumFractionDigits: 2
+});
+
 class LoanCalc extends Component {
   constructor(props) {
     super(props);
@@ -120,12 +126,12 @@ class LoanCalc extends Component {
   <h1>RESULTS</h1>
   <p>Average mortgage cost</p>
   <p>Cost with Lessgage</p>
-  <p>Total cost: {`${this.state.price - this.state.deposit + this.state.fee} `}</p>
-  <p>Monthly Payment: {`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`}</p>
+  <p>Total cost: {formatter.format(`${this.state.price - this.state.deposit + this.state.fee}`)}</p>
+  <p>Monthly Payment: {formatter.format(`${(this.state.price - this.state.deposit) / (this.state.years * 12)}`)}</p>
   <p>&nbsp;</p>
   <p>Cost with Mortgage</p>
-  <p>Total cost: {`${ Math.round((((this.state.price - this.state.deposit) *(0.00327374+(0.00327374/(Math.pow((0.00327374+1), this.state.years*12)-1)))) * this.state.years*12), 2) }`}</p>
-  <p>Monthly Payment: {`${Math.round((((this.state.price - this.state.deposit) *(0.00327374+(0.00327374/(Math.pow((0.00327374+1), this.state.years*12)-1))))), 2) }`}</p> 
+  <p>Total cost: {formatter.format(`${ Math.round((((this.state.price - this.state.deposit) *(0.00327374+(0.00327374/(Math.pow((0.00327374+1), this.state.years*12)-1)))) * this.state.years*12)) }`)}</p>
+  <p>Monthly Payment: {formatter.format(`${Math.round((((this.state.price - this.state.deposit) *(0.00327374+(0.00327374/(Math.pow((0.00327374+1), this.state.years*12)-1)))))) }`)}</p> 
 
   <button onClick={this.closeModal} >calculate again</button>
 </ReactModal>
