@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import IntroUI from './IntroUI.js';
+// import Footer from './Footer.js';
 
 class AppUI extends Component {
   render() {
-    return (  
+    return (
       <div className="App">
         <section className="hero first is-large">
           <div className='hero-head'>
@@ -25,6 +26,14 @@ class AppUI extends Component {
           </div>
         </section>
         <IntroUI />
+        <footer className="footer">
+          <div className="container">
+            <div className="content has-text-centered">
+              <strong>Lessgage</strong> by Daniel Llewellyn
+            <p className='copyright'>© Lessgage 2017</p>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

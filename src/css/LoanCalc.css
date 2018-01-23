@@ -1,5 +1,25 @@
 .calculator .form{
-
+  background-color: rgba(210, 227, 210, 0.22);
+  text-align: left;
   padding:1em;
-
+  margin: 2.5em;
 }
+
+.calculator h1 {
+  font-size: 1.5em;
+  font-family: 'Francois One', sans-serif;
+  margin: 1em
+}
+
+.calculator .label {
+  margin-bottom: 2em
+}
+
+input {
+  border-radius: 5px
+}
+
+.button {
+  margin-top: 1em
+}
+

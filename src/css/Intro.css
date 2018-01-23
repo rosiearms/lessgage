@@ -7,15 +7,6 @@
   background-size: cover;
 } 
 
-.Intro .third .hero{
-  background-image: url("../imgs/shakinghands.jpg");
-  min-height: 100%; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .Intro .double{
   background-color: rgba(71, 155, 71, 0.63);
   width: 100%;
@@ -27,21 +18,52 @@
 }
 
 .Intro .double p{
-  font-family: 'PT Sans Narrow', sans-serif;
   padding-bottom: 1em;
 }
 
-.Intro .lessgage{
-  background-color: rgba(211, 171, 42, 0.40);
-
+.Intro .mid-text {
+  background-color: rgba(255, 255, 255, 0.26);
+  display: inline-block;
+  border-radius: 0.5em;
+  padding: 1em
 }
 
-.Intro .lessgage h1{
+.Intro .mid-text h1 {
   font-family: 'Francois One', sans-serif;
-  font-size: 2em;
+  font-size: 2em
 }
 
-.Intro .lessgage p{
-  font-family: 'PT Sans Narrow', sans-serif;
-  padding-bottom: 1em;
+.Intro .tile {
+  margin: 3em
 }
+
+.Intro .columns {
+  margin-bottom: 1em;
+  border: 5px solid  rgba(71, 155, 71, 0.63);
+}
+
+.Intro .column {
+  background-color: rgba(71, 155, 71, 0.63)
+}
+
+.Intro .img-one {
+  background-image: url("../imgs/newcar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.Intro .img-two {
+  background-image: url("../imgs/solar-panels.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.Intro .calc-form {
+  border-radius: 5px;
+  margin: 2px;
+}
+

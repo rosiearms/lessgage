@@ -22,8 +22,22 @@ body, html {
   padding: 10px;
 }
 
+@media (max-width: 800px) {
+  .App .hero-body {
+    margin-top: 15em;
+    margin-bottom: 15em
+  }
+  .App .hero .title{
+    font-size: 3em;
+  }
+ }
+
 .App .hero .header{
   background-color: rgba(255, 255, 255, 0.26);
   display: inline-block;
   border-radius: 0.5em;
+}
+
+.App .footer {
+  background-color:  rgba(71, 155, 71, 0.63);
 }

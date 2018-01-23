@@ -13,9 +13,6 @@ const modalStyles = {
   },
   content : {
     position: 'absolute',
-    top                   : '50%',
-    right                 : 'auto',
-    bottom                : 'auto'
   }
 }
 
@@ -84,34 +81,32 @@ class LoanCalc extends Component {
   render() {
     return (
       <div className='calculator'>
-        <h1>Calculate your costs</h1>
+        <h1>What you can save?</h1>
+        <p>Enter the details of your mortgage below and we'll show you the difference if you bought with Lessgage</p>
         <div className='form'>
           <form onSubmit={this.handleSubmit}>
             <div className='field'>
-            <label>
+            <label className='label'>
                 mortgage term:
         </label>
               <div className="control">
                 <input type="text" value={this.state.years} onChange={this.handleTermChange} />
               </div>
-              <label>
+              <label className='label'>
                 property price:
         </label>
               <div className="control">
                 <input type="text" value={this.state.price} onChange={this.handlePriceChange} />
               </div>
-              <label>
+              <label className='label'>
                 deposit:
         </label>
               <div className="control">
                 <input type="text" placeholder='£' value={this.state.deposit} onChange={this.handleDepositChange} />
               </div>
-              <div className='field is-grouped'>
+              <div className='field'>
                 <div className="control">
                   <button className='button is-primary' type="submit" value="Submit">Submit</button>
-                </div>
-                <div className="control">
-                  <button className="button is-text">Clear</button>
                 </div>
               </div>
             </div>
